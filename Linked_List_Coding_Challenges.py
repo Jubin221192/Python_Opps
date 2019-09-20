@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Aug 15 22:18:25 2019
 
+Created on Thu Aug 15 22:18:25 2019
 @author: jubin
+
+
 """
 
 # Linked List Implementation
@@ -64,5 +66,47 @@ def nth_from_last(head, n):
 
 # Finding the nth element
 print(nth_from_last(head,2))
+
+# Reversing a linked List
+
+def reverse(head):
+    current = head
+    previous = None
+    nextnode = None
+    
+    while current:
+        
+        nextnode = current.nextnode
+        
+        current.nextnode = previous
+        
+        previous = current
+        current = nextnode
+        
+    return previous
+
+def print_nums(x):
+    for i in range(x):
+        print(i)
+        return
+    
+print_nums(10)
+        
+        
+while False:
+    print("Looping...")        
+
+
+from collections import Counter
+Counter('abcdeabcdabcaba').most_common(6)
+
+
+        
+        
+        
+        
+    
+    
+
 
 
